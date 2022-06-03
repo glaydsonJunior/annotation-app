@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Anote!</title>
+    <link rel="stylesheet" href="/static/master.css">
+    <link rel="shortcut icon" href="static/ballon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <div class='formulario'>
+    <h1>Bloco de Anotações</h1>
+    <form action="{{ url_for('notes') }}" method="post">
+      <input type="text" name="conteudo" required>
+      <button type="submit" name="button">Adicionar</button>
+    </form>
+    </div>
+    <div class='caixa'>
+      {% for i in note %}
+      <div class='selecao'>
+        <p class='card'>{{ i }}</p>
+        <form class="deletar" action="http://192.168.18.50:5000/back/{{ i }}" method="post">
+          <button name='{{i}}' type='submit'>X</button>
+        </form>
+      </div>
+        {% endfor %}
+    </div>
+  </body>
+</html>

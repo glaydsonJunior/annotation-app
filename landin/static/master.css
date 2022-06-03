@@ -1,0 +1,35 @@
+.caixa{
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  text-align:center;
+  top:30px;
+  left:500px;
+}
+.card{
+  background-color:#bfd6f6;
+  width:400px;
+}
+body{
+  background-color:  #3b7dd8;
+  width: 500px;
+}
+.formulario{
+  position: relative;
+  left: 640px;
+}
+button{
+  background-color: #add6ff;
+  border-color: #add6ff;
+}
+.deletar{
+  width:20px;
+  height: 20px;
+  position: relative;
+  top:16px;
+  left: 5px;
+}
+.selecao{
+  display: flex;
+  flex-direction: row;
+}
